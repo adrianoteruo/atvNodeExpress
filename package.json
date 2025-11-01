@@ -1,0 +1,13 @@
+{
+  "name": "meu-projeto-crud",
+  "version": "1.0.0",
+  "description": "Projeto CRUD com JSON-Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "json-server": "^1.0.0-beta.3"
+  }
+}

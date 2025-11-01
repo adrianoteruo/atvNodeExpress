@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Netflix</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="carregarUsuarios()"> <div class="container">
+        <h1>Administração de Usuários</h1>
+        
+        <a href="cadastro.html">Cadastrar novo usuário</a>
+        <hr>
+
+        <div class="form-atualizar">
+    <h3>Editar Usuário</h3>
+    <input type="hidden" id="edit-id"> 
+    
+    <input type="text" id="edit-nome" placeholder="Nome" required>
+    <input type="text" id="edit-sobrenome" placeholder="Sobrenome" required>
+    <input type="text" id="edit-cpf" placeholder="CPF" required>
+    <input type="email" id="edit-email" placeholder="Email" required>
+    <input type="password" id="edit-senha" placeholder="Senha" required>
+    <input type="text" id="edit-rua" placeholder="Rua" required>
+    <input type="text" id="edit-cep" placeholder="CEP" required>
+    <input type="text" id="edit-cidade" placeholder="Cidade" required>
+    <input type="text" id="edit-estado" placeholder="Estado (ex: SP)" required>
+    <input type="text" id="edit-telefone" placeholder="Telefone" required>
+    
+    <button onclick="atualizarDados()">Salvar Alterações</button>
+</div>
+        
+        <hr>
+
+        <h2>Todos os Usuários</h2>
+        <table>
+            <thead>
+                <tr>
+                    <td>ID:</td>
+                    <td>Nome:</td>
+                    <td>Email:</td>
+                    <td>Telefone:</td>
+                    <td>Ações:</td> </tr>
+            </thead>
+            <tbody id="tabela-corpo">
+                </tbody>
+        </table>
+    </div>
+    
+    <script src="js/admin.js"></script> 
+</body>
+<div class="top-bar"></div>
+</html>

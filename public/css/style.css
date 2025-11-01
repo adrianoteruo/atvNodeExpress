@@ -1,0 +1,131 @@
+body {
+    background-color: #EBEBEB; /* Cinza claro do fundo */
+    color: #333333; /* Cor do texto principal (preto/cinza escuro) */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #FFFFFF; /* Fundo branco para os formulários */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+h1, h2, h3 {
+    color: #333; /* Títulos em preto */
+    font-weight: 600;
+}
+
+/* Estilo dos Formulários */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 95%;
+    padding: 12px 10px;
+    margin-bottom: 15px;
+    background-color: #FFFFFF;
+    border: 1px solid #ddd;
+    color: #333;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #3483FA; /* Borda azul ao focar */
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 131, 250, 0.2);
+}
+
+button, .btn-acao {
+    background-color: #3483FA; /* Azul do Mercado Livre */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+button:hover, .btn-acao:hover {
+    background-color: #2968C8; /* Azul um pouco mais escuro */
+}
+
+/* Cor especial para o botão de apagar */
+.btn-delete {
+    background-color: #f3f3f3;
+    color: #333;
+    border: 1px solid #ddd;
+}
+.btn-delete:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* Estilo da Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+td {
+    border-bottom: 1px solid #EBEBEB; /* Linha cinza clara */
+    padding: 12px 8px;
+    text-align: left;
+}
+
+thead {
+    background-color: transparent;
+    color: #666;
+    font-weight: bold;
+    border: none;
+}
+
+/* Remove a borda do cabeçalho */
+thead td { 
+    border: none;
+}
+
+
+a {
+    color: #3483FA; /* Azul do Mercado Livre */
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    border-top: 1px
+
+}
+
+.top-bar {
+    background-color: #FFF159; 
+    height: 50px;
+    width: 100%;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+
+body {
+    padding-top: 70px; 
+    background-color: #EBEBEB;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}

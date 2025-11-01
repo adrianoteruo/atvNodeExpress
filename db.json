@@ -1,0 +1,30 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Usuário",
+      "sobrenome": "Admin",
+      "cpf": "123.456.789-00",
+      "email": "admin@email.com",
+      "senha": "123",
+      "rua": "Rua Principal",
+      "cep": "08700-000",
+      "cidade": "Mogi das Cruzes",
+      "estado": "SP",
+      "telefone": "11912345678"
+    },
+    {
+      "id": "73fa",
+      "nome": "adriano",
+      "sobrenome": "teruo",
+      "cpf": "12312312323",
+      "email": "adriano@email.com",
+      "senha": "123asd",
+      "rua": "ruasdj",
+      "cep": "0098098",
+      "cidade": "mogi",
+      "estado": "sp",
+      "telefone": "1190909090"
+    }
+  ]
+}
