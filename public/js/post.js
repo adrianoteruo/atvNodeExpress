@@ -28,8 +28,8 @@ function enviarDados(event) {
         telefone: telefone
     };
 
-    // Enviar para a API /usuarios
-    fetch('http://localhost:3000/usuarios', { 
+    // CORREÇÃO: URL alterada para /api/usuarios
+    fetch('/api/usuarios', { 
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

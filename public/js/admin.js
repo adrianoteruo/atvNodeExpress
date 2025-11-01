@@ -1,4 +1,5 @@
-const API_URL = 'http://localhost:3000/usuarios';
+// CORREÇÃO: URL da API alterada para um caminho relativo com /api
+const API_URL = '/api/usuarios';
 
 // 1. (GET) Carregar todos os usuários na tabela
 function carregarUsuarios() {
@@ -64,21 +65,27 @@ function preencherFormularioEdicao(id) {
     });
 }
 
-// 4. PUT  Enviar os dados atualizados
+// 4. PATCH Enviar os dados atualizados
 function atualizarDados() {
     var id = document.getElementById('edit-id').value;
     
-  
+    // CORREÇÃO 1: Coletar TODOS os 10 campos do formulário
     var dadosEditados = {
         nome: document.getElementById('edit-nome').value,
         sobrenome: document.getElementById('edit-sobrenome').value,
+        cpf: document.getElementById('edit-cpf').value, // <-- Faltava
         email: document.getElementById('edit-email').value,
+        senha: document.getElementById('edit-senha').value, // <-- Faltava
+        rua: document.getElementById('edit-rua').value, // <-- Faltava
+        cep: document.getElementById('edit-cep').value, // <-- Faltava
+        cidade: document.getElementById('edit-cidade').value, // <-- Faltava
+        estado: document.getElementById('edit-estado').value, // <-- Faltava
         telefone: document.getElementById('edit-telefone').value
     };
 
 
     fetch(`${API_URL}/${id}`, {
-        method: 'PATCH', 
+        method: 'PATCH', // Usando PATCH para atualização parcial (ou PUT para total)
         headers: {
             'Content-Type': 'application/json'
         },
@@ -87,9 +94,20 @@ function atualizarDados() {
     .then(response => response.json())
     .then(dados => {
         alert('Usuário atualizado com sucesso!');
-        // Limpa o formulário de edição
-        document.querySelector('.form-atualizar').reset(); 
+        
+        
         document.getElementById('edit-id').value = '';
+        document.getElementById('edit-nome').value = '';
+        document.getElementById('edit-sobrenome').value = '';
+        document.getElementById('edit-cpf').value = '';
+        document.getElementById('edit-email').value = '';
+        document.getElementById('edit-senha').value = '';
+        document.getElementById('edit-rua').value = '';
+        document.getElementById('edit-cep').value = '';
+        document.getElementById('edit-cidade').value = '';
+        document.getElementById('edit-estado').value = '';
+        document.getElementById('edit-telefone').value = '';
+
         carregarUsuarios();
     });
 }

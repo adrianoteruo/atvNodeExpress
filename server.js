@@ -7,23 +7,25 @@ const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
 const port = process.env.PORT || 3000;
 
-// Configura o middleware do JSON Server
-server.use(middlewares);
-server.use(router); 
-
+// 1. Configura o middleware de arquivos estáticos (public)
 
 server.use(express.static(path.join(__dirname, 'public')));
 
+// 2. Configura os middlewares padrões do JSON Server
+server.use(middlewares);
 
-server.get('*', (req, res) => {
-    if (req.url.startsWith('/api')) {
-        
-        return router(req, res);
-    }
-    
+// 3. Monta o router do JSON Server em um prefixo 
+
+server.use('/api', router); 
+
+// 4. (Opcional) Redireciona a raiz '/' para a página de admin
+server.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'admin.html')); 
 });
 
+// Inicia o servidor
 server.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
+    console.log(`Frontend disponível em http://localhost:${port}`);
+    console.log(`API disponível em http://localhost:${port}/api/usuarios`);
 });
